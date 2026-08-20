@@ -1,0 +1,73 @@
+:root {
+    --font-color: hsl(0, 0%, 100%);
+    --background-color: hsl(228, 99%, 58%);
+    --opacity: hsl(0, 0%, 0%);
+}
+
+/* mobile size 375 */
+/* desktop 1440px */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 17px;
+    font-family: 'Inter', 'sans-sarif';
+}
+body{
+    width: 100%;
+}
+
+.main-container{
+    width: min(1440px, 100%);
+    height: auto;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 1fr 1fr 100px;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    background-color: var(--background-color);
+    /* gap: 10px; */
+    grid-template-areas: 'navbar navbar navbar navbar '
+                         'hero hero first-starts second-start'
+                         'hero hero third-start fourth-start'
+                         'footer footer footer footer';
+    background-color: back;
+}
+.main-container > *{
+    border:  1px solid rgba(255, 255,255,0.15); 
+}
+.navbar{
+    grid-area: navbar;
+    /* background-color: red; */
+}
+.hero{
+    grid-area: hero;
+    /* background-color: green; */
+}
+.start-1{
+    grid-area: first-starts;
+    /* background-color: blue; */
+}
+.start-2{
+    grid-area: second-start;
+    /* background-color: antiquewhite; */
+}
+.start-3{
+    grid-area: third-start;
+    /* background-color: pink; */
+}
+.start-4{
+    grid-area: fourth-start;
+    /* background-color: bisque; */
+}
+.footer{
+    grid-area: footer;
+    /* background-color: bisque; */
+}
+
+
+
