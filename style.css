@@ -43,6 +43,7 @@ body{
 }
 .navbar{
     grid-area: navbar;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,18 +58,38 @@ body{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    cursor: pointer;
+}
+.menu-toggle{
+    position: absolute;
+    opacity: 0;
+}
+.menu-toggle:checked ~ .menu-panel{
+    display: flex;
 }
 .hamburger span{
     display: block;
     width: 20px;
     height: 3px;
     background-color: var(--font-color);
-    cursor: pointer;
 }
 
-/* here we write logic of breck hamburger into section */
+/* need to update on the menu section */
 .menu-panel{
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 12rem;
+    padding: 1.25rem;
+    list-style: none;
+    background-color: hsla(0, 0%, 0%, 0.25);
+}
+.menu-panel a{
+    color: var(--font-color);
 }
 
 /* hero section design  */
@@ -81,7 +102,7 @@ body{
 }
 .head-para{
     padding-top: 30px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 .start-1{
     grid-area: first-starts;
@@ -130,9 +151,58 @@ body{
     justify-content: space-between;
     padding: 10px;
     align-items: center;
-    
+    font-size: 0.8rem;
 }
 
+@media (max-width: 767px) {
+
+    .main-container{
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr 100px;
+        grid-template-areas: 'navbar'
+                             'hero'
+                             'first-starts'
+                             'second-start'
+                             'third-start'
+                             'fourth-start'
+                             'footer';
+    }
+
+    .hero{
+        position: relative;
+    }
+
+  
+
+    .menu-panel{
+        position: absolute;
+        display: flex;
+        top: 0;
+        width: 100%;
+        padding-top: 110px;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    
+    .menu-panel a{
+        text-decoration: none;
+        font-size: 1.1rem;
+        
+    }
+
+      .footer{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+
+}
 
 
 
