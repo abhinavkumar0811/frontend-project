@@ -16,6 +16,7 @@
 html{
     font-size: 17px;
     font-family: 'Inter', 'sans-sarif';
+    color: var(--font-color);
 }
 body{
     width: 100%;
@@ -42,32 +43,96 @@ body{
 }
 .navbar{
     grid-area: navbar;
-    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+
 }
+.logo-content i{
+    padding-right: 4px;
+}
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.hamburger span{
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: var(--font-color);
+    cursor: pointer;
+}
+
+/* here we write logic of breck hamburger into section */
+.menu-panel{
+    display: none;
+}
+
+/* hero section design  */
 .hero{
     grid-area: hero;
-    /* background-color: green; */
+    /* padding: 110px 150px 110px 30px; */
+    padding: 6.875rem 9.375rem 6.875rem 1.25rem;
+    font-size: 1.2rem;
+    
+}
+.head-para{
+    padding-top: 30px;
+    font-size: 0.9rem;
 }
 .start-1{
     grid-area: first-starts;
-    /* background-color: blue; */
+    
 }
 .start-2{
     grid-area: second-start;
-    /* background-color: antiquewhite; */
+   
 }
 .start-3{
     grid-area: third-start;
-    /* background-color: pink; */
+    
 }
 .start-4{
     grid-area: fourth-start;
-    /* background-color: bisque; */
+    
 }
+.start-1, .start-2, .start-3, .start-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+.icon-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.start-specification{
+    
+}
+.start-head{
+    font-size: 1rem;
+}
+.start-para{
+    padding-top: 0.4rem;
+    font-size: 0.8rem;
+}
+
+/* footer start  */
 .footer{
     grid-area: footer;
-    /* background-color: bisque; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    
 }
+
 
 
 
